@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Instagram feed bootstrap</title>
+</head>
+
+<body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+          <img class="camera-icon pt-1" src="./iconos/camara mini.png" />
+          <img class="location-icon pt-1" src="./iconos/marcador-de-posicion.png" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+          <button type="button" class="btn btn-success">Publicar Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto p2 ps-4 instagram-nav-text" href="#">
+        <img src="./iconos/camera.png" alt="instagram icon" width="30" height="24"
+          class="d-inline-block align-text-top" />
+        Instagram
+      </a>
+      <div class="navbar-nav ms-auto p-2">
+        <button type="button" class="btn btn-success ms-auto mb-2 mb-lg-0" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          Crear Nuevo Post
+        </button>
+      </div>
+      <div class="btn-group pe-4">
+        <button
+        class="btn dropdown-toggle p-2"
+        type="button"
+        id="defaultDropdown"
+        data-bs-toggle="dropdown"
+        data-bs-auto-close="true"
+        aria-expanded="false"
+      >
+        <img class="cogwheel" src="./iconos/ajustes.png" />
+      </button>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" href="#">Menu</a></li>
+        <li><a class="dropdown-item" href="#">Opciones</a></li>
+        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center pt-auto">
+      <li class="page-item disabled">
+      </li>
+      <li class="page-item"><a class="page-link" href="./index.html">-</a></li>
+      <li class="page-item"><a class="page-link" href="./segunda.html">-</a></li>
+      </li>
+    </ul>
+  </nav>
+  <div class="container picture-thumbnails">
+    <div class="row mx-auto">
+      <div class="col-md-4">
+        <img src="./imagenes/4.jfif" class="img-thumbnail px-0" alt="wow">
+        <img src="./imagenes/5.jfif" class="img-thumbnail px-0"
+          alt="beach">
+        <img src="./imagenes/6.jfif" class="img-thumbnail px-0" alt="santiago">
+      </div>
+      <div class="col-md-4">
+        <img src="./imagenes/7.jfif" class="img-thumbnail"
+          alt="food">
+        <img src="./imagenes/8.jfif" class="img-thumbnail" alt="puppies">
+        <img src="./imagenes/9.jfif" class="img-thumbnail" alt="ps4">
+      </div>
+      <div class="col-md-4">
+        <img src="./imagenes/10.jfif" class="img-thumbnail" alt="landscape">
+        <img src="./imagenes/11.jfif" class="img-thumbnail" alt="amusement park">
+        <img src="./imagenes/12.jfif" class="img-thumbnail" alt="headphones">
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

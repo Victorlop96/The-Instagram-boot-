@@ -1,76 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-		rel="stylesheet"
-		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-		crossorigin="anonymous"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-		href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-		rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles.css" />
-		<title>Instagram feed bootstrap</title>
-	</head>
-    <body>
-		<nav class="navbar">
-			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">
-				<img src="https://cdn-icons-png.flaticon.com/128/733/733558.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Instagram
-			  </a>
-			  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-			  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-					  <form>
-						<div class="mb-3">
-						  <label for="recipient-name" class="col-form-label">Recipient:</label>
-						  <input type="text" class="form-control" id="recipient-name">
-						</div>
-						<div class="mb-3">
-						  <label for="message-text" class="col-form-label">Message:</label>
-						  <textarea class="form-control" id="message-text"></textarea>
-						</div>
-					  </form>
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					  <button type="button" class="btn btn-primary">Send message</button>
-					</div>
-				  </div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./styles.css" />
+	<title>Instagram feed bootstrap</title>
+</head>
+
+<body>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal">
+					</button>
 				</div>
-			  </div>
-			  <div class="btn-group pe-4">
-				<button
-				  class="btn dropdown-toggle p-2"
-				  type="button"
-				  id="defaultDropdown"
-				  data-bs-toggle="dropdown"
-				  data-bs-auto-close="true"
-				  aria-expanded="false"
-				>
-				  <img class="menu" src="https://t3.ftcdn.net/jpg/02/97/90/18/240_F_297901867_0C7uB7AvwcY08GONDEdwzrTdq1nOyGtp.jpg" />
+				<div class="modal-body">
+					<div class="input-group">
+						<textarea class="form-control" aria-label="With textarea">
+						</textarea>
+					</div>
+						<img class="camera-icon pt-1"
+						src="./iconos/camara mini.png" />
+						<img class="location-icon pt-1" src="./iconos/marcador-de-posicion.png" />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
+					<button type="button" class="btn btn-success"> Publish post </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-light fixed-top bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand me-auto p2 ps-4 instagram-nav-text" href="#">
+				<img src="./iconos/camera.png" alt="instagram icon" width="30" height="24"
+					class="d-inline-block align-text-top" />
+				Instagram
+			</a>
+			<div class="navbar-nav ms-auto p-2">
+				<button type="button" class="btn btn-success ms-auto mb-2 mb-lg-0" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					Crear Nuevo Post!
+				</button>
+			</div>
+			<div class="btn-group pe-4">
+				<button class="btn dropdown-toggle p-2" type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+					data-bs-auto-close="true" aria-expanded="false">
+					<img class="cogwheel" src="./iconos/ajustes.png" />
 				</button>
 				<ul class="dropdown-menu dropdown-menu-lg-end">
-				  <li><a class="dropdown-item" href="#">Menu item</a></li>
-				  <li><a class="dropdown-item" href="#">Menu item</a></li>
-				  <li><a class="dropdown-item" href="#">Log out</a></li>
+					<li><a class="dropdown-item" href="#">Menu</a></li>
+					<li><a class="dropdown-item" href="#">Opciones</a></li>
+					<li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
 				</ul>
-			  </div>
 			</div>
-		  </nav>
-    </body>
+		</div>
+	</nav>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled"></li>
+			<li class="page-item"><a class="page-link" href="./index.html">-</a></li>
+			<li class="page-item"><a class="page-link" href="./segunda.html">-</a></li>
+			</li>
+		</ul>
+	</nav>
+	<div class="container">
+		<div class="row py-4">
+			<div class="col-md-6 offset-3 py-0">
+				<div class="card">
+					<div class="card-header">
+						<div class="row">
+							<div class="col">
+								<h4 class="h4">
+									Primer Post
+								</h4>
+							</div>
+							<div class="col text-end">
+								<h4 class="h4">23/10</h4>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<img src="./imagenes/developer.jfif" class="card-img-top" alt="costanera-chile">
+					</div>
+					<div class="card-footer">
+						<p class="card-text p-1 h6">Liked by <b>4GeeksAcademy</b> and <b>23 others</b>.</p>
+						<p class="card-text px-1 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<div class="container px-1 pb-1">
+							<div class="row">
+								<div class="col">
+									<img src="./iconos/heart.png" class="heart-icon">
+								</div>
+								<div class="col-9">
+									Comentario!
+								</div>
+								<div class="col">
+									<img src="./iconos/elipsis-de-tres-puntos.png" class="three-dots-icon text-end">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+		<div class="row py-4">
+			<div class="col-md-6 offset-3 py-1">
+				<div class="card">
+					<div class="card-header">
+						<div class="row">
+							<div class="col">
+								<h4 class="h4">
+									Segundo Post
+								</h4>
+							</div>
+							<div class="col text-end">
+								<h4 class="h4">25/10</h4>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<img src="./imagenes/2.jfif"
+							class="card-img-top" alt="colorful-veggies">
+					</div>
+					<div class="card-footer">
+						<p class="card-text p-1 h6">Liked by <b>4GeeksAcademy</b> and <b>23 others</b>.</p>
+						<p class="card-text px-1 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<div class="container px-1 pb-1">
+							<div class="row">
+								<div class="col">
+									<img src="./iconos/heart.png" class="heart-icon">
+								</div>
+								<div class="col-9">
+									Comentario!
+								</div>
+								<div class="col">
+									<img src="./iconos/elipsis-de-tres-puntos.png" class="three-dots-icon text-end">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="container">
+		<div class="row py-4">
+			<div class="col-md-6 offset-3 py-1">
+				<div class="card">
+					<div class="card-header">
+						<div class="row">
+							<div class="col">
+								<h4 class="h4">
+									Tercer Post
+								</h4>
+							</div>
+							<div class="col text-end">
+								<h4 class="h4">14/07</h4>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<img src="./imagenes/3.jfif"
+							class="card-img-top" alt="181010131059-australia-best-beaches-cossies-beach-cocos3">
+					</div>
+					<div class="card-footer">
+						<p class="card-text p-1 h6">Liked by <b>4GeeksAcademy</b> and <b>23 others</b>.</p>
+						<p class="card-text px-1 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<div class="container px-1 pb-1">
+							<div class="row">
+								<div class="col">
+									<img src="./iconos/heart.png" class="heart-icon">
+								</div>
+								<div class="col-9">
+									Comentario!
+								</div>
+								<div class="col">
+									<img src="./iconos/elipsis-de-tres-puntos.png" class="three-dots-icon text-end">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+		</script>
+</body>
+
+</html>
+
 </html>
